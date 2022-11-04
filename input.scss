@@ -1,0 +1,28 @@
+@import '~tailwindcss/base';
+@import '~tailwindcss/utilities';
+
+.foo {
+  &:not(.bar) {
+    @apply bg-red-100;
+    background: red;
+
+    &.baz > .bam {
+      @apply bg-orange-100;
+      background: orange;
+    }
+  }
+}
+
+body {
+  .foo {
+    &:not(.bar) {
+      @apply bg-green-100;
+      background: green;
+
+      &.baz > .bam {
+        @apply bg-blue-100;
+        background: blue;
+      }
+    }
+  }
+}
